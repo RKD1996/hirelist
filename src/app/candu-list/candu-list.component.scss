@@ -1,0 +1,130 @@
+.card{
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  .card-img{
+    flex-basis: 10%;
+    text-align: center;
+    img{
+      height: 95px;
+      width: 90px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+    }
+  }
+  .card-body{
+    flex-basis: 90%;
+    .exp{
+      color: #3366ff;
+    }
+    .basic-info{
+      display: flex;
+      align-items: center;
+      .name-exp{
+        flex-basis: 50%;
+      }
+      .mail{
+        flex-basis: 50%;
+        text-align: right;
+        color: #aaa;
+      }
+    }
+    .details{
+      display: flex;
+      margin: 15px 0;
+      .specs{
+        flex-basis: 30%;
+        .head{
+          color: #bbb;
+        }
+        .body{
+          color: #101010;
+        }
+      }
+      .salary{
+        flex-basis: 70%;
+        text-align: left;
+        display: inline-block;
+        .head{
+          color: #bbb;
+        }
+        .body{
+          color: #101010;
+        }
+      }
+    }
+    .skill{
+      display: inline-block;
+      .tag{
+        font-size: 12px;
+        background: #ddd;
+        padding: 5px 10px;
+        margin-left: 5px;
+        color: #555;
+        border-radius: 25px;
+      }
+    }
+  }
+  .card-action{
+    flex-basis: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 767px){
+      margin-top: 15px;
+    }
+    .profile{
+      font-size: 18px;
+      background: none;
+      border: none;
+      margin-right: 10px;
+      color: #3366ff;
+      outline: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: .3s;
+      &:focus{
+        text-shadow: 1px  2px #ddd;
+      }
+    }
+    .locked, .unlock{
+      font-size: 17px;
+      display: flex;
+      cursor: pointer;
+      outline: none;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px 15px;
+      background: #3366ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      width: 13rem;
+      @media (max-width: 767px){
+        padding: 5px 10px;
+      }
+      &:focus{
+        box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+      }
+      // display: none !important;
+      i{
+        flex-basis: 5%;
+      }
+      .text{
+        flex-basis: 80%;
+      }
+      .info{
+        font-size: 12px;
+        flex-basis: 100%;
+      }
+    }
+     .unlock {
+      color: #ed6685;
+      background: white;
+    }
+  }
+}

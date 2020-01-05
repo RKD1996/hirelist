@@ -1,0 +1,111 @@
+.profile{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500 !important;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  @media (max-width: 767px){
+    justify-content: center;
+  }
+  .displayText{
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .profile-img{
+    flex-basis: 30%;
+    text-align: center;
+    @media (max-width: 767px){
+      flex-basis: 100%;
+    }
+    img{
+      height: 250px;
+      width: 250px;
+    }
+  }
+  .profile-basic{
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: 767px){
+      flex-basis: 100%;
+    }
+    .info{
+      flex-basis: 50%;
+      @media (max-width: 767px){
+        flex-basis: 100%;
+      }
+      .name{
+        display: inline-block;
+        color: #3366ff;
+      }
+      p{
+        margin-top: 15px;
+        span{
+          background: #eee;
+          padding: 5px 10px;
+          border-radius: 25px;
+        }
+      }
+    }
+    .profile-salary{
+      flex-basis: 50%;
+      @media (max-width: 767px){
+        flex-basis: 100%;
+      }
+    }
+    .profile-skill{
+      flex-basis: 100%;
+      margin-top: 15px;
+      @media (max-width: 767px){
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      p{
+        margin-bottom: 5px;
+        @media (max-width: 767px){
+          flex-basis: 100%;
+        }
+      }
+      .tag{
+        font-size: 12px;
+        background: #ddd;
+        padding: 5px 10px;
+        margin-left: 5px;
+        color: #555;
+        border-radius: 25px;
+        @media (max-width: 767px){
+          margin: 5px;
+        }
+      }
+    }
+    .profile-type{
+      flex-basis: 100%;
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+        .category{
+          flex-basis: 50%;
+          @media (max-width: 767px){
+            flex-basis: 100%;
+          }
+          .type{
+            margin: 5px 0px;
+          }
+        }
+        .specialization{
+          flex-basis: 50%;
+          @media (max-width: 767px){
+            flex-basis: 100%;
+          }
+          P{
+            margin: 5px 0px;
+          }
+        }
+    }
+  }
+}

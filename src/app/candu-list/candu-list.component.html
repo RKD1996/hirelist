@@ -1,0 +1,44 @@
+<div class="" appScrolldetector>
+  <div class="card" *ngFor="let i of cad_list" >
+    <div class="card-img">
+      <img [src]="i.profile_pic_url" alt="">
+    </div>
+    <div class="card-body">
+      <div class="basic-info">
+        <div class="name-exp">
+          <p class="name"><b>{{i.name}}</b></p>
+          <p class="exp">{{i.total_experience_in_year}} (Experience)</p>
+        </div>
+        <div class="mail">
+          <a>{{i.email}}</a>
+        </div>
+      </div>
+      <div class="details">
+        <div class="specs">
+          <p class="head">Specialization</p>
+          <p class="body" *ngFor="let k of i.preferred_job_type" > {{k.category.value}}</p>
+        </div>
+        <div class="salary">
+          <p class="head">Expected Salary</p>
+          <p class="body">{{i.salary.expected.max}}</p>
+        </div>
+      </div>
+      <div class="skill">
+        <span> Skills: </span><span class="tag" *ngFor="let s of i.skills" >{{s.value}}</span>
+      </div>
+    </div>
+    <div class="card-action">
+      <button class="profile" type="button" name="button" *ngIf="i.is_unlocked" (click)="viewProfile(i)"> view Profile</button>
+      <button  class="locked" type="button" name="button" *ngIf="i.is_unlocked; else elseBlock" (click)="i.is_unlocked = !i.is_unlocked">
+        <i class="material-icons">lock</i>
+        <span class="text">Unlock Candidate</span> <span class="info">To Call & Chat</span>
+      </button>
+      <ng-template #elseBlock>
+        <button class="unlock" type="button" name="button">
+          <i class="material-icons">lock_open</i>
+          <span class="text">Candidate Unlocked</span>
+        </button>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="profile">
+  <h2 class="displayText" >{{can.displayText}}</h2>
+  <div class="profile-img">
+    <img [src]="can.profile_pic_url" alt="">
+  </div>
+  <div class="profile-basic">
+    <div class="info">
+      <h4><b>Name</b>: <div class="name">{{can.name}}</div></h4>
+      <p><b>Email</b>: <span>{{can.email}}</span></p>
+      <p><b>Highest level of Education</b>: <span>{{can.highest_education}}</span></p>
+      <p><b>Profile Match Score</b>: <span>{{can.matching_score}}</span></p>
+      <p><b>Total Experience</b>: <span>{{can.total_experience_in_year}}</span></p>
+    </div>
+    <div class="profile-salary">
+      <h4>Salary Details</h4>
+      <p><b>Current</b>: {{can.salary.current}}</p>
+      <p><b>Expected</b>: {{can.salary.expected.min}} - {{can.salary.expected.max}} {{can.salary.unit}}</p>
+    </div>
+    <div class="profile-skill">
+      <p><b>Skills:</b></p>
+      <span *ngFor="let i of can.skills" class="tag">{{i.value}}</span>
+    </div>
+    <div class="profile-type">
+      <div class="category">
+        <b>Preferred Jobs</b>:
+        <div *ngFor="let t of can.preferred_job_type" class="type">
+            {{t.category.value}}
+        </div>
+      </div>
+        <div class="specialization">
+          <p><b>Specialization</b></p>
+          <div *ngFor="let t of can.preferred_job_type" class="type">
+            <p *ngFor="let s of t.specialization" >{{s.value}}</p>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
